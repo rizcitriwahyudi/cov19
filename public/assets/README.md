@@ -1,127 +1,121 @@
-# gentelella
+Introduction
+============
 
-Gentelella Admin is a free to use Bootstrap admin template.
-This template uses the default Bootstrap 4 styles along with a variety of powerful jQuery plugins and tools to create a powerful framework for creating admin panels or back-end dashboards.
+[![npm version](https://img.shields.io/npm/v/admin-lte/latest.svg)](https://www.npmjs.com/package/admin-lte)
+[![Packagist](https://img.shields.io/packagist/v/almasaeed2010/adminlte.svg)](https://packagist.org/packages/almasaeed2010/adminlte)
+[![CDNJS](https://img.shields.io/cdnjs/v/admin-lte.svg)](https://cdnjs.com/libraries/admin-lte)
 
-Theme uses several libraries for charts, calendar, form validation, wizard style interface, off-canvas navigation menu, text forms, date range, upload area, form autocomplete, range slider, progress bars, notifications and much more.
+**AdminLTE** is a fully responsive administration template. Based on **[Bootstrap 4.4](https://getbootstrap.com)** framework and also the JS/jQuery plugin.
+Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops.
 
-We would love to see how you use this awesome admin template. You can notify us about your site, app or service by tweeting to [@colorlib](https://twitter.com/colorlib). Once the list will grown long enough we will write a post similar to [this](https://colorlib.com/wp/avada-theme-examples/) to showcase the best examples.
+**Preview on [AdminLTE.io](https://adminlte.io/themes/v3)**
 
+Looking for Premium Templates?
+------------------------------
+AdminLTE.io just opened a new premium templates page. Hand picked to ensure the best quality and the most affordable
+prices. Visit https://adminlte.io/premium for more information.
 
-## Theme Demo
-![Gentelella Bootstrap Admin Template](https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/gentelella-admin-template-preview.jpg 
-"Gentelella Theme Browser Preview")
+!["AdminLTE Presentation"](https://adminlte.io/AdminLTE3.png "AdminLTE Presentation")
 
-**[Template Demo](https://colorlib.com/polygon/gentelella/index.html)**
+**AdminLTE** has been carefully coded with clear comments in all of its JS, SCSS and HTML files.
+SCSS has been used to increase code customizability.
 
-## Documentation
+Installation
+------------
+There are multiple ways to install AdminLTE.
 
-**[Documentation](https://colorlibhq.github.io/gentelella/)**
+#### Download:
 
-## Installation via Package Manager
+Download from [Github releases](https://github.com/ColorlibHQ/AdminLTE/releases).
 
-Our goal is to make it installable on different Package Manager! Do you want to use it on your favorite Package Manager and you know how? Pull request all the way! 
+#### Using The Command Line:
 
-As of now, this is some installation available:
+_**Important Note**: To install it via NPM/Yarn, you need at least Node.js 10 or higher._
 
-**Bower**
-
+__Via NPM__
+```bash
+npm install admin-lte@^3.0 --save
 ```
-bower install gentelella --save
+
+__Via Yarn__
+```bash
+yarn add admin-lte@^3.0
 ```
 
-**npm**
-
+__Via Composer__
+```bash
+composer require "almasaeed2010/adminlte=~3.0"
 ```
-npm install gentelella --save
+
+__Via Git__
+- Clone to your machine
+```
+git clone https://github.com/ColorlibHQ/AdminLTE.git
 ```
 
-**yarn**
+Documentation
+-------------
+Visit the [online documentation](https://adminlte.io/docs/3.0/) for the most
+updated guide. Information will be added on a weekly basis.
 
-```
-yarn add gentelella
-```
-## How to contribute
-To contribute, please ensure that you have stable [Node.js](https://nodejs.org/) and [npm](https://npmjs.com) installed.
+Browser Support
+---------------
+- IE 10+
+- Firefox (latest)
+- Chrome (latest)
+- Safari (latest)
+- Opera (latest)
+- Microsoft Edge (latest)
 
-Test if Gulp CLI is installed by running `gulp --version`.  If the command isn't found, run `npm install -g gulp`.  For more information about installing Gulp, see the Gulp's [Getting Started](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md).
+Contribution
+------------
+Contribution are always **welcome and recommended**! Here is how:
 
-To have all gulp dependencies run ```npm install```
+- Fork the repository ([here is the guide](https://help.github.com/articles/fork-a-repo/)).
+- Clone to your machine ```git clone https://github.com/YOUR_USERNAME/AdminLTE.git```
+- Create a new branch
+- Make your changes
+- Create a pull request
 
-If `gulp` is installed, follow the steps below.
+#### Compile dist files
+To compile the dist files you need nodejs/npm, clone/download the repo then:
 
-1. Fork and clone the repo.
-2. Run `gulp`, this will open gentelella on your default browser
-3. Now you can code, code and code!
-4. Submit a pull request
+1. `npm install` (install npm deps)
+2. _Optional:_ `npm run dev` (developer mode, autocompile with browsersync support for live demo)
+3. `npm run production` (compile css/js files)
 
-## Gentelella for other platforms and frameworks
+#### Contribution Requirements:
+- When you contribute, you agree to give a non-exclusive license to AdminLTE.io to use that contribution in any context as we (AdminLTE.io) see appropriate.
+- If you use content provided by another party, it must be appropriately licensed using an [open source](http://opensource.org/licenses) license.
+- Contributions are only accepted through Github pull requests.
+- Finally, contributed code must work in all supported browsers (see above for browser support).
 
-* [Gentelella on Ruby on Rails 4](https://github.com/iogbole/gentelella_on_rails) thanks to Israel Ogbole.
-* [Gentelella on Rails 5.x](https://github.com/mwlang/gentelella-rails) thanks to Michael Lang
-* [Gentelella on Smarty 3](https://github.com/microvb/otp-thing) with one time password generator, validator, and QR code generator that has no web dependencies (self-contained) in PHP thanks to MicroVB INC
-* [Gentelella integrated into Symfony 5](https://github.com/mamless/Gentella-admin-Symfony-5) full stack PHP framework thanks to  Mamour Wane.
-* [Gentelella on Yii framework 2](https://github.com/yiister/yii2-gentelella) with an asset bundle, a layout template and some widgets.
-* [Gentelella on Angular 2](https://github.com/kmkatsma/angular2-webpack-starter-gentelella) Angular Webpack Starter modified to utilize the Gentelella.
-* [Gentelella on Aurelia](https://github.com/kmkatsma/aurelia-gentelella) Typescript webpack skeleton modified to utilize the Gentelella.
-* [Gentelella on Laravel](https://github.com/Labs64/laravel-boilerplate) PHP / Laravel 5 boilerplate project with Gentelella Admin theme support.
-* [Gentelella on Django](https://github.com/GiriB/django-gentelella) Gentelella modified to fit as a Django app
-* [Gentelella on Flask](https://github.com/afourmy/flask-gentelella) Gentelella modified to fit as a Flask app
-* [Gentelella on CakePHP 3](https://github.com/backstageel/cakephp-gentelella-theme) Gentelella modified to work on CakePHP
-* [Gentelella right to left](https://github.com/mortezakarimi/gentelella-rtl) Gentelella modified to work with right to left languages like Persian
-* [Gentelella-rtl on Yii framework 2](https://github.com/mortezakarimi/yii2-gentelella-rtl) with an asset bundle, a layout template and some widgets. inspired from [Gentelella on Yii framework 2](https://github.com/yiister/yii2-gentelella)
-* [Gentelella by React](https://github.com/thomaslwq/react-admin) Gentelella realized by React
+License
+-------
+AdminLTE is an open source project by [AdminLTE.io](https://adminlte.io) that is licensed under [MIT](http://opensource.org/licenses/MIT). AdminLTE.io
+reserves the right to change the license of future releases.
 
-Let us know if you have done integration for this admin template on other platforms and frameworks and we'll be happy to share your work.
+Latest Release
+---------------
+- [AdminLTE 3](https://github.com/ColorlibHQ/AdminLTE/releases/latest)
 
-## Scripts included:
-* Bootstrap
-* Font Awesome
-* jQuery-Autocomplete
-* FullCalendar
-* Charts.js
-* Bootstrap Colorpicker
-* Cropper
-* dataTables
-* Date Range Picker for Bootstrap
-* Dropzone
-* easyPieChart
-* ECharts
-* bootstrap-wysiwyg
-* Flot - Javascript plotting library for jQuery.
-* gauge.js
-* iCheck
-* jquery.inputmask plugin
-* Ion.RangeSlider
-* jQuery
-* jVectorMap
-* moment.js
-* Morris.js - pretty time-series line graphs
-* PNotify - Awesome JavaScript notifications
-* NProgress
-* Pace
-* Parsley
-* bootstrap-progressbar
-* select2
-* Sidebar Transitions - simple off-canvas navigations
-* Skycons - canvas based wather icons
-* jQuery Sparklines plugin
-* switchery - Turns HTML checkbox inputs into beautiful iOS style switches
-* jQuery Tags Input Plugin
-* Autosize - resizes text area to fit text
-* validator - HTML from validator using jQuery
-* jQuery Smart Wizard
+Legacy Releases
+---------------
+- [AdminLTE 2](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.18)
+- [AdminLTE 1](https://github.com/ColorlibHQ/AdminLTE/releases/tag/1.3.1)
 
-## Other templates and useful resources
-* [Free Bootstrap Admin Templates](https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/ "Bootstrap Admin Templates on Colorlib") - List of the best Free Bootstrap admin dashboard templates that are available for free for personal and commercial use.
-* [Free Admin Templates](https://colorlib.com/wp/free-html5-admin-dashboard-templates/ "List of free HTML based admin templates by Colorlib") - Long list of the best free HTML5 powered admin dashboard templates. Available for personal and commercial use.
-* [Angular Templates](https://colorlib.com/wp/angularjs-admin-templates/ "Angular Admin Templates on Colorlib") - List of the most popular admin templates based on AngularJS.
-* [HTML Admin Templates](https://colorlib.com/wp/html-admin-templates/ "Material Design Admin Templates on Colorlib") - Most of these templates are based on AngularJS and uses a stunning Material design.
-* [Bootstrap Admin Templates](https://colorlib.com/wp/bootstrap-admin-templates/ "List of Premium Bootstrap Admin Templates by Colorlib") - List of premium Bootstrap admin templates that uses a minimal flat or material design. Majority of these themes uses AngularJS but HTML5 versions are also available.
-* [WordPress Admin Templates](https://colorlib.com/wp/wordpress-admin-dashboard-themes-plugins/ "List of WordPress Admin Dashboard Templates and Plugins by Colorlib") - List of the best WordPress admin dashboard templates and plugins that will add a personal touch to your WordPress dashboard.
-* [WordPress Themes](https://colorlib.com/wp/free-wordpress-themes/ "List of Free WordPress themes by Colorlib") - A huge selection of the best free WordPress themes that are all licensed under GPL and are available for personal and commercial use without restrictions.
+Change log
+----------
+Visit the [releases](https://github.com/ColorlibHQ/AdminLTE/releases) page to view the changelog
 
-## License information
-Gentelella is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. But you always need to state that Colorlib is the original author of this template.
+Image Credits
+-------------
+[Pixeden](http://www.pixeden.com/psd-web-elements/flat-responsive-showcase-psd)
 
-Project is developed and maintained by [Colorlib](https://colorlib.com/ "Colorlib - Make Your First Blog") and Aigars Silkalns
+[Graphicsfuel](http://www.graphicsfuel.com/2013/02/13-high-resolution-blur-backgrounds/)
+
+[Pickaface](http://pickaface.net/)
+
+[Unsplash](https://unsplash.com/)
+
+[Uifaces](http://uifaces.com/)

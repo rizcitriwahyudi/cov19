@@ -1,184 +1,194 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images/favicon.ico" type="image/ico" />
-<title>Covid-19</title>
-
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
-<link href="{{ url('assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ url('assets/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ url('assets/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ url('assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ url('assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') }}" rel="stylesheet">
-
-<link href="{{ url('assets/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
-
-<link href="{{ url('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-
-<link href="{{ url('assets/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
-
-<link href="{{ url('assets/vendors/iCheck/skins/flat/green.css') }}" rel="stylesheet">
-
-<link href="{{ url('assets/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css') }}" rel="stylesheet">
-
-<link href="{{ url('assets/vendors/jqvmap/dist/jqvmap.min.css') }}" rel="stylesheet" />
-
-<link href="{{ url('assets/vendors/bootstrap-daterangepicker/daterangepicker.css') }}" rel="stylesheet">
-
-<link href="{{ url('assets/build/css/custom.min.css') }}" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Covid-19 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{ url('/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{ url('/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ url('/assets/dist/css/adminlte.min.css') }}">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body class="nav-md">
-<div class="container body">
-<div class="main_container">
-<div class="col-md-3 left_col">
-<div class="left_col scroll-view">
-<div class="navbar nav_title" style="border: 0;">
-<a href="{{ url('/dashboards') }}" class="site_title"><i class="fa fa-paw"></i> <span>Covid-19</span></a>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{ url('/assets/plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="{{ url('/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{ url('/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="{{ url('/assets/plugins/jqvmap/jqvmap.min.css') }}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ url('/assets/dist/css/adminlte.min.css') }}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{{ url('/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{{ url('/assets/plugins/daterangepicker/daterangepicker.css') }}">
+  <!-- summernote -->
+  <link rel="stylesheet" href="{{ url('/assets/plugins/summernote/summernote-bs4.css') }}">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+       <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto"> 
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="{{ url('/assets/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light"> <strong> Ex Woyo Team</strong></span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        
+        <div class="image">
+          <img src="{{ url('/assets/dist/img/avatar04.png') }}" class="img-circle elevation-3" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Rizci Tri Wahyudi </a>
+          <a href="#" class="d-block"> <small> "Beginner Programmer" </small></a>
+        </div>
+      </div>
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Indo-Dashboard</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index2.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>API-4Developers</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+ @yield('content')
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.0.5
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
 </div>
-<div class="clearfix"></div>
+<!-- ./wrapper -->
 
-{{-- <div class="profile clearfix">
-<div class="profile_pic">
-<img src="images/img.jpg" alt="..." class="img-circle profile_img">
-</div>
-<div class="profile_info">
-<span>Welcome,</span>
-<h2>John Doe</h2>
-</div>
-</div> --}}
-
-<br />
-
-<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-<div class="menu_section">
-{{-- <h3>General</h3> --}}
-<ul class="nav side-menu">
-<li><a><i class="fa fa-home"></i> Dashboards <span class="fa fa-chevron-down"></span></a>
-<ul class="nav child_menu">
-<li><a href="{{ url('/dashboards/indonesia') }}">Indonesia</a></li>
-<li><a href="index3.html">Bekasi</a></li>
-</ul>
-</ul>
-</div>
-</div>
-
-
-<div class="sidebar-footer hidden-small">
-<a data-toggle="tooltip" data-placement="top" title="Settings">
-<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-</a>
-<a data-toggle="tooltip" data-placement="top" title="FullScreen">
-<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-</a>
-<a data-toggle="tooltip" data-placement="top" title="Lock">
-<span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-</a>
-<a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-</a>
-</div>
-
-</div>
-</div>
-
-<div class="top_nav">
-<div class="nav_menu">
-<div class="nav toggle">
-<a id="menu_toggle"><i class="fa fa-bars"></i></a>
-</div>
-<nav class="nav navbar-nav">
-
-</nav>
-</div>
-</div>
-
-
-<div class="right_col" role="main">
-
-{{-- Start Content --}}
-@yield('content')
-{{-- End Content --}}
-
-</div>
-
-
-<footer>
-<div class="pull-right">
-Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-</div>
-<div class="clearfix"></div>
-</footer>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
-<script src="{{ url('assets/vendors/jquery/dist/jquery.min.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/fastclick/lib/fastclick.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/nprogress/nprogress.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/Chart.js/dist/Chart.min.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/gauge.js/dist/gauge.min.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/iCheck/icheck.min.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/skycons/skycons.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/Flot/jquery.flot.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-<script src="{{ url('assets/vendors/Flot/jquery.flot.pie.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-<script src="{{ url('assets/vendors/Flot/jquery.flot.time.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-<script src="{{ url('assets/vendors/Flot/jquery.flot.stack.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-<script src="{{ url('assets/vendors/Flot/jquery.flot.resize.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-<script src="{{ url('assets/vendors/flot-spline/js/jquery.flot.spline.min.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-<script src="{{ url('assets/vendors/flot.curvedlines/curvedLines.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/DateJS/build/date.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/jqvmap/dist/jquery.vmap.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-<script src="{{ url('assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-<script src="{{ url('assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/moment/min/moment.min.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-<script src="{{ url('assets/vendors/bootstrap-daterangepicker/daterangepicker.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-
-<script src="{{ url('assets/build/js/custom.min.js') }}" type="62f5048db4dc09f3a80c4f1a-text/javascript"></script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="62f5048db4dc09f3a80c4f1a-|49" defer=""></script></body>
-
-<script data-cfasync="false" src="{{ url('assets/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
-<script src="{{ url('assets/vendors/jquery/dist/jquery.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/fastclick/lib/fastclick.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/nprogress/nprogress.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/iCheck/icheck.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-
-<script src="{{ url('assets/vendors/datatables.net/js/jquery.dataTables.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/datatables.net-buttons/js/dataTables.buttons.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/datatables.net-buttons/js/buttons.flash.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/datatables.net-buttons/js/buttons.html5.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/datatables.net-buttons/js/buttons.print.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/datatables.net-responsive/js/dataTables.responsive.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/datatables.net-scroller/js/dataTables.scroller.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/jszip/dist/jszip.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/pdfmake/build/pdfmake.min.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
-<script src="{{ url('assets/vendors/pdfmake/build/vfs_fonts.js') }}" type="d48539c966dc4bd8a599a9b6-text/javascript"></script>
+<!-- jQuery -->
+<script src="{{ url('/assets/plugins/jquery/jquery.min.js') }}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{{ url('/assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="{{ url('/assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- ChartJS -->
+<script src="{{ url('/assets/plugins/chart.js/Chart.min.js') }}"></script>
+<!-- Sparkline -->
+<script src="{{ url('/assets/plugins/sparklines/sparkline.js') }}"></script>
+<!-- JQVMap -->
+<script src="{{ url('/assets/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
+<script src="{{ url('/assets/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{{ url('/assets/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
+<!-- daterangepicker -->
+<script src="{{ url('/assets/plugins/moment/moment.min.js') }}"></script>
+<script src="{{ url('/assets/plugins/daterangepicker/daterangepicker.js') }}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{{ url('/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+<!-- Summernote -->
+<script src="{{ url('/assets/plugins/summernote/summernote-bs4.min.js') }}"></script>
+<!-- overlayScrollbars -->
+<script src="{{ url('/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<!-- AdminLTE App -->
+<script src="{{ url('/assets/dist/js/adminlte.js') }}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{ url('/assets/dist/js/pages/dashboard.js') }}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{ url('/assets/dist/js/demo.js') }}"></script>
+<!-- DataTables -->
+<script src="{{ url('/assets//plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ url('/assets//plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ url('/assets//plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ url('/assets//plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+<!-- AdminLTE App -->
+<script src="{{ url('/assets//dist/js/adminlte.min.js') }}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{ url('/assets//dist/js/demo.js') }}"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+</body>
 </html>

@@ -14,9 +14,25 @@ class DashboardsController extends Controller
      */
     public function index()
     {
-        $response = Http::get('https://api.kawalcorona.com');
-        $data = $response->json();
-        return view('dashboards.index', compact('data'));
+
+        $global_positif = Http::get('https://api.kawalcorona.com/positif');
+        $data_global_positif = $global_positif->json();
+
+        $global_sembuh = Http::get('https://api.kawalcorona.com/sembuh');
+        $data_global_sembuh = $global_sembuh->json();
+
+        $global_meninggal = Http::get('https://api.kawalcorona.com/meninggal');
+        $data_global_meninggal = $global_meninggal->json();
+        // dd($data_global_positif);
+
+        $data_indo_provinsi = Http::get('https://api.kawalcorona.com/indonesia/provinsi');
+        $data_provinsi = $data_indo_provinsi->json();
+
+        $data_indonesia = Http::get('https://api.kawalcorona.com/indonesia');
+        $data_indo = $data_indonesia->json();
+
+        // dd($indo, $data, $data_global_positif);
+        return view('dashboards.index', compact('data_provinsi','data_indo', 'data_global_positif','data_global_sembuh','data_global_meninggal'));
     }
 
     public function indonesia()
@@ -24,7 +40,7 @@ class DashboardsController extends Controller
         return view('dashboards.indonesia', compact('data'));
     }
 
-    /**
+    /**z
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
